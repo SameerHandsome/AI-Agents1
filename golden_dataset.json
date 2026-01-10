@@ -1,0 +1,164 @@
+{
+  "metadata": {
+    "generated_at": "2026-01-10T22:14:46.158478",
+    "total_questions": 10,
+    "categories": {
+      "single_tool": 5,
+      "multi_tool": 3,
+      "complex_multi_tool": 2
+    },
+    "difficulty_levels": {
+      "easy": 5,
+      "medium": 3,
+      "hard": 2
+    }
+  },
+  "questions": [
+    {
+      "id": 1,
+      "query": "What's the weather in Tokyo?",
+      "expected_tools": [
+        "get_weather"
+      ],
+      "expected_response_contains": [
+        "Tokyo",
+        "temperature",
+        "°C"
+      ],
+      "task_category": "single_tool",
+      "difficulty": "easy"
+    },
+    {
+      "id": 2,
+      "query": "Convert 100 USD to EUR",
+      "expected_tools": [
+        "convert_currency"
+      ],
+      "expected_response_contains": [
+        "100",
+        "USD",
+        "EUR",
+        "="
+      ],
+      "task_category": "single_tool",
+      "difficulty": "easy"
+    },
+    {
+      "id": 3,
+      "query": "What time is it in New York right now?",
+      "expected_tools": [
+        "get_world_time"
+      ],
+      "expected_response_contains": [
+        "New York",
+        "time"
+      ],
+      "task_category": "single_tool",
+      "difficulty": "easy"
+    },
+    {
+      "id": 4,
+      "query": "Tell me about the Eiffel Tower",
+      "expected_tools": [
+        "get_wikipedia_summary"
+      ],
+      "expected_response_contains": [
+        "Eiffel Tower",
+        "Paris"
+      ],
+      "task_category": "single_tool",
+      "difficulty": "easy"
+    },
+    {
+      "id": 5,
+      "query": "Search for the latest news about artificial intelligence",
+      "expected_tools": [
+        "tavily_search"
+      ],
+      "expected_response_contains": [
+        "AI",
+        "artificial intelligence"
+      ],
+      "task_category": "single_tool",
+      "difficulty": "easy"
+    },
+    {
+      "id": 6,
+      "query": "What's the weather in London and what time is it there?",
+      "expected_tools": [
+        "get_weather",
+        "get_world_time"
+      ],
+      "expected_response_contains": [
+        "London",
+        "temperature",
+        "time"
+      ],
+      "task_category": "multi_tool",
+      "difficulty": "medium"
+    },
+    {
+      "id": 7,
+      "query": "Compare the weather in Tokyo and New York",
+      "expected_tools": [
+        "get_weather"
+      ],
+      "expected_response_contains": [
+        "Tokyo",
+        "New York",
+        "temperature"
+      ],
+      "task_category": "multi_tool",
+      "difficulty": "medium"
+    },
+    {
+      "id": 8,
+      "query": "Search for recent AI breakthroughs and tell me about neural networks from Wikipedia",
+      "expected_tools": [
+        "tavily_search",
+        "get_wikipedia_summary"
+      ],
+      "expected_response_contains": [
+        "AI",
+        "neural network"
+      ],
+      "task_category": "multi_tool",
+      "difficulty": "medium"
+    },
+    {
+      "id": 9,
+      "query": "What's the weather in Paris, convert 50 EUR to USD, and what time is it in Paris?",
+      "expected_tools": [
+        "get_weather",
+        "convert_currency",
+        "get_world_time"
+      ],
+      "expected_response_contains": [
+        "Paris",
+        "EUR",
+        "USD",
+        "temperature",
+        "time"
+      ],
+      "task_category": "complex_multi_tool",
+      "difficulty": "hard"
+    },
+    {
+      "id": 10,
+      "query": "Search for information about climate change, get the weather in Sydney, and tell me about the Great Barrier Reef",
+      "expected_tools": [
+        "tavily_search",
+        "get_weather",
+        "get_wikipedia_summary"
+      ],
+      "expected_response_contains": [
+        "climate",
+        "Sydney",
+        "weather",
+        "Great Barrier Reef"
+      ],
+      "task_category": "complex_multi_tool",
+      "difficulty": "hard"
+    }
+  ]
+}

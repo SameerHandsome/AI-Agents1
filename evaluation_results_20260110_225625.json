@@ -1,0 +1,669 @@
+{
+  "basic_agent": {
+    "agent_name": "Basic Agent",
+    "individual_results": [
+      {
+        "query_id": 1,
+        "query": "What's the weather in Tokyo?",
+        "difficulty": "easy",
+        "category": "single_tool",
+        "metrics": {
+          "task_success": true,
+          "tool_recall": 1.0,
+          "tool_precision": 1.0,
+          "answer_accuracy": 0.6666666666666666
+        },
+        "details": {
+          "expected_tools": [
+            "get_weather"
+          ],
+          "actual_tools": [
+            "get_weather"
+          ],
+          "expected_keywords": [
+            "Tokyo",
+            "temperature",
+            "°C"
+          ],
+          "response_preview": "The current weather in Tokyo is 15°C (58°F) with patchy rain nearby, humidity at 85%, and winds at 54 km/h, feeling like 12°C (53°F)...."
+        },
+        "agent": "Basic Agent"
+      },
+      {
+        "query_id": 2,
+        "query": "Convert 100 USD to EUR",
+        "difficulty": "easy",
+        "category": "single_tool",
+        "metrics": {
+          "task_success": true,
+          "tool_recall": 1.0,
+          "tool_precision": 1.0,
+          "answer_accuracy": 1.0
+        },
+        "details": {
+          "expected_tools": [
+            "convert_currency"
+          ],
+          "actual_tools": [
+            "convert_currency"
+          ],
+          "expected_keywords": [
+            "100",
+            "USD",
+            "EUR",
+            "="
+          ],
+          "response_preview": "100 USD is equivalent to 85.90 EUR based on the current exchange rate of 1 USD = 0.8590 EUR...."
+        },
+        "agent": "Basic Agent"
+      },
+      {
+        "query_id": 3,
+        "query": "What time is it in New York right now?",
+        "difficulty": "easy",
+        "category": "single_tool",
+        "metrics": {
+          "task_success": false,
+          "tool_recall": 1.0,
+          "tool_precision": 1.0,
+          "answer_accuracy": 0.5
+        },
+        "details": {
+          "expected_tools": [
+            "get_world_time"
+          ],
+          "actual_tools": [
+            "get_world_time"
+          ],
+          "expected_keywords": [
+            "New York",
+            "time"
+          ],
+          "response_preview": "It's currently 12:49:14 PM in New York...."
+        },
+        "agent": "Basic Agent"
+      },
+      {
+        "query_id": 4,
+        "query": "Tell me about the Eiffel Tower",
+        "difficulty": "easy",
+        "category": "single_tool",
+        "metrics": {
+          "task_success": true,
+          "tool_recall": 1.0,
+          "tool_precision": 1.0,
+          "answer_accuracy": 1.0
+        },
+        "details": {
+          "expected_tools": [
+            "get_wikipedia_summary"
+          ],
+          "actual_tools": [
+            "get_wikipedia_summary"
+          ],
+          "expected_keywords": [
+            "Eiffel Tower",
+            "Paris"
+          ],
+          "response_preview": "The Eiffel Tower is an iconic iron lattice tower located in Paris, France, built for the 1889 World's Fair. It stands at a height of 324 meters (1,063 feet) and was the tallest man-made structure in t..."
+        },
+        "agent": "Basic Agent"
+      },
+      {
+        "query_id": 5,
+        "query": "Search for the latest news about artificial intelligence",
+        "difficulty": "easy",
+        "category": "single_tool",
+        "metrics": {
+          "task_success": true,
+          "tool_recall": 1.0,
+          "tool_precision": 1.0,
+          "answer_accuracy": 1.0
+        },
+        "details": {
+          "expected_tools": [
+            "tavily_search"
+          ],
+          "actual_tools": [
+            "tavily_search"
+          ],
+          "expected_keywords": [
+            "AI",
+            "artificial intelligence"
+          ],
+          "response_preview": "The latest news about artificial intelligence can be found on various websites, including NBC News, Artificial Intelligence News, and Reuters. These sources provide updates on AI chatbots, machine lea..."
+        },
+        "agent": "Basic Agent"
+      },
+      {
+        "query_id": 6,
+        "query": "What's the weather in London and what time is it there?",
+        "difficulty": "medium",
+        "category": "multi_tool",
+        "metrics": {
+          "task_success": true,
+          "tool_recall": 1.0,
+          "tool_precision": 1.0,
+          "answer_accuracy": 1.0
+        },
+        "details": {
+          "expected_tools": [
+            "get_weather",
+            "get_world_time"
+          ],
+          "actual_tools": [
+            "get_weather",
+            "get_world_time"
+          ],
+          "expected_keywords": [
+            "London",
+            "temperature",
+            "time"
+          ],
+          "response_preview": "The current weather in London is partly cloudy with a temperature of 1°C (34°F) and feels like -1°C (30°F). The current time in London is 5:50:03 PM on Saturday, January 10, 2026...."
+        },
+        "agent": "Basic Agent"
+      },
+      {
+        "query_id": 7,
+        "query": "Compare the weather in Tokyo and New York",
+        "difficulty": "medium",
+        "category": "multi_tool",
+        "metrics": {
+          "task_success": true,
+          "tool_recall": 1.0,
+          "tool_precision": 1.0,
+          "answer_accuracy": 0.6666666666666666
+        },
+        "details": {
+          "expected_tools": [
+            "get_weather"
+          ],
+          "actual_tools": [
+            "get_weather",
+            "get_weather"
+          ],
+          "expected_keywords": [
+            "Tokyo",
+            "New York",
+            "temperature"
+          ],
+          "response_preview": "The current weather in Tokyo is 15°C (58°F) with patchy rain nearby, while in New York it's 7°C (44°F) and sunny. Tokyo's weather feels like 12°C (53°F) due to high winds, whereas New York feels like ..."
+        },
+        "agent": "Basic Agent"
+      },
+      {
+        "query_id": 8,
+        "query": "Search for recent AI breakthroughs and tell me about neural networks from Wikipedia",
+        "difficulty": "medium",
+        "category": "multi_tool",
+        "metrics": {
+          "task_success": true,
+          "tool_recall": 1.0,
+          "tool_precision": 1.0,
+          "answer_accuracy": 1.0
+        },
+        "details": {
+          "expected_tools": [
+            "tavily_search",
+            "get_wikipedia_summary"
+          ],
+          "actual_tools": [
+            "tavily_search",
+            "get_wikipedia_summary"
+          ],
+          "expected_keywords": [
+            "AI",
+            "neural network"
+          ],
+          "response_preview": "Recent AI breakthroughs include the release of DeepCogito v2, an open-source AI model with improved logical reasoning and task planning, and significant research breakthroughs by Google with models li..."
+        },
+        "agent": "Basic Agent"
+      },
+      {
+        "query_id": 9,
+        "query": "What's the weather in Paris, convert 50 EUR to USD, and what time is it in Paris?",
+        "difficulty": "hard",
+        "category": "complex_multi_tool",
+        "metrics": {
+          "task_success": true,
+          "tool_recall": 1.0,
+          "tool_precision": 1.0,
+          "answer_accuracy": 1.0
+        },
+        "details": {
+          "expected_tools": [
+            "get_weather",
+            "convert_currency",
+            "get_world_time"
+          ],
+          "actual_tools": [
+            "get_weather",
+            "convert_currency",
+            "get_world_time"
+          ],
+          "expected_keywords": [
+            "Paris",
+            "EUR",
+            "USD",
+            "temperature",
+            "time"
+          ],
+          "response_preview": "The current weather in Paris is overcast with a temperature of 4°C, 50 EUR is equivalent to 58 USD, and the current time in Paris is 18:51...."
+        },
+        "agent": "Basic Agent"
+      },
+      {
+        "query_id": 10,
+        "query": "Search for information about climate change, get the weather in Sydney, and tell me about the Great Barrier Reef",
+        "difficulty": "hard",
+        "category": "complex_multi_tool",
+        "metrics": {
+          "task_success": true,
+          "tool_recall": 1.0,
+          "tool_precision": 1.0,
+          "answer_accuracy": 1.0
+        },
+        "details": {
+          "expected_tools": [
+            "tavily_search",
+            "get_weather",
+            "get_wikipedia_summary"
+          ],
+          "actual_tools": [
+            "tavily_search",
+            "get_weather",
+            "get_wikipedia_summary"
+          ],
+          "expected_keywords": [
+            "climate",
+            "Sydney",
+            "weather",
+            "Great Barrier Reef"
+          ],
+          "response_preview": "Climate change refers to the long-term warming of the planet due to an increase in average global temperatures. The main driver of climate change is human activities, primarily the burning of fossil f..."
+        },
+        "agent": "Basic Agent"
+      }
+    ],
+    "aggregate_metrics": {
+      "overall": {
+        "task_success_rate": 0.9,
+        "avg_tool_recall": 1.0,
+        "avg_tool_precision": 1.0,
+        "avg_answer_accuracy": 0.8833333333333334
+      },
+      "by_difficulty": {
+        "easy": {
+          "task_success_rate": 0.8,
+          "avg_tool_recall": 1.0,
+          "count": 5
+        },
+        "medium": {
+          "task_success_rate": 1.0,
+          "avg_tool_recall": 1.0,
+          "count": 3
+        },
+        "hard": {
+          "task_success_rate": 1.0,
+          "avg_tool_recall": 1.0,
+          "count": 2
+        }
+      },
+      "by_category": {
+        "single_tool": {
+          "task_success_rate": 0.8,
+          "avg_tool_recall": 1.0,
+          "count": 5
+        },
+        "multi_tool": {
+          "task_success_rate": 1.0,
+          "avg_tool_recall": 1.0,
+          "count": 3
+        },
+        "complex_multi_tool": {
+          "task_success_rate": 1.0,
+          "avg_tool_recall": 1.0,
+          "count": 2
+        }
+      },
+      "total_execution_time": 234.6917643547058,
+      "avg_time_per_query": 23.46917643547058
+    },
+    "evaluated_at": "2026-01-10T22:52:09.243277"
+  },
+  "advanced_agent": {
+    "agent_name": "Advanced Agent",
+    "individual_results": [
+      {
+        "query_id": 1,
+        "query": "What's the weather in Tokyo?",
+        "difficulty": "easy",
+        "category": "single_tool",
+        "metrics": {
+          "task_success": true,
+          "tool_recall": 1.0,
+          "tool_precision": 1.0,
+          "answer_accuracy": 1.0
+        },
+        "details": {
+          "expected_tools": [
+            "get_weather"
+          ],
+          "actual_tools": [
+            "get_weather"
+          ],
+          "expected_keywords": [
+            "Tokyo",
+            "temperature",
+            "°C"
+          ],
+          "response_preview": "Weather in Tokyo:\n• Temperature: 15°C / 58°F\n• Condition: Patchy rain nearby\n• Humidity: 85%\n• Wind: 54 km/h\n• Feels like: 12°C / 53°F..."
+        },
+        "agent": "Advanced Agent"
+      },
+      {
+        "query_id": 2,
+        "query": "Convert 100 USD to EUR",
+        "difficulty": "easy",
+        "category": "single_tool",
+        "metrics": {
+          "task_success": true,
+          "tool_recall": 1.0,
+          "tool_precision": 1.0,
+          "answer_accuracy": 1.0
+        },
+        "details": {
+          "expected_tools": [
+            "convert_currency"
+          ],
+          "actual_tools": [
+            "convert_currency"
+          ],
+          "expected_keywords": [
+            "100",
+            "USD",
+            "EUR",
+            "="
+          ],
+          "response_preview": "100 USD is equivalent to 85.90 EUR based on the current exchange rate of 1 USD = 0.8590 EUR...."
+        },
+        "agent": "Advanced Agent"
+      },
+      {
+        "query_id": 3,
+        "query": "What time is it in New York right now?",
+        "difficulty": "easy",
+        "category": "single_tool",
+        "metrics": {
+          "task_success": false,
+          "tool_recall": 1.0,
+          "tool_precision": 1.0,
+          "answer_accuracy": 0.5
+        },
+        "details": {
+          "expected_tools": [
+            "get_world_time"
+          ],
+          "actual_tools": [
+            "get_world_time"
+          ],
+          "expected_keywords": [
+            "New York",
+            "time"
+          ],
+          "response_preview": "It's currently 12:53 PM in New York...."
+        },
+        "agent": "Advanced Agent"
+      },
+      {
+        "query_id": 4,
+        "query": "Tell me about the Eiffel Tower",
+        "difficulty": "easy",
+        "category": "single_tool",
+        "metrics": {
+          "task_success": true,
+          "tool_recall": 1.0,
+          "tool_precision": 1.0,
+          "answer_accuracy": 1.0
+        },
+        "details": {
+          "expected_tools": [
+            "get_wikipedia_summary"
+          ],
+          "actual_tools": [
+            "get_wikipedia_summary"
+          ],
+          "expected_keywords": [
+            "Eiffel Tower",
+            "Paris"
+          ],
+          "response_preview": "The Eiffel Tower is an iconic iron lattice tower located in Paris, France, built for the 1889 World's Fair. It stands at a height of 324 meters (1,063 feet) and was the tallest man-made structure in t..."
+        },
+        "agent": "Advanced Agent"
+      },
+      {
+        "query_id": 5,
+        "query": "Search for the latest news about artificial intelligence",
+        "difficulty": "easy",
+        "category": "single_tool",
+        "metrics": {
+          "task_success": true,
+          "tool_recall": 1.0,
+          "tool_precision": 1.0,
+          "answer_accuracy": 1.0
+        },
+        "details": {
+          "expected_tools": [
+            "tavily_search"
+          ],
+          "actual_tools": [
+            "tavily_search"
+          ],
+          "expected_keywords": [
+            "AI",
+            "artificial intelligence"
+          ],
+          "response_preview": "Here are some of the latest news sources about artificial intelligence:\n\n1. NBC News: The latest news and top stories on artificial intelligence, including AI chatbots like Microsoft's ChatGPT, Apple'..."
+        },
+        "agent": "Advanced Agent"
+      },
+      {
+        "query_id": 6,
+        "query": "What's the weather in London and what time is it there?",
+        "difficulty": "medium",
+        "category": "multi_tool",
+        "metrics": {
+          "task_success": true,
+          "tool_recall": 1.0,
+          "tool_precision": 1.0,
+          "answer_accuracy": 1.0
+        },
+        "details": {
+          "expected_tools": [
+            "get_weather",
+            "get_world_time"
+          ],
+          "actual_tools": [
+            "get_weather",
+            "get_world_time"
+          ],
+          "expected_keywords": [
+            "London",
+            "temperature",
+            "time"
+          ],
+          "response_preview": "The current weather in London is partly cloudy with a temperature of 1°C (34°F) and humidity at 86%. The current time in London is 17:54:19 (5:54 PM)...."
+        },
+        "agent": "Advanced Agent"
+      },
+      {
+        "query_id": 7,
+        "query": "Compare the weather in Tokyo and New York",
+        "difficulty": "medium",
+        "category": "multi_tool",
+        "metrics": {
+          "task_success": true,
+          "tool_recall": 1.0,
+          "tool_precision": 1.0,
+          "answer_accuracy": 0.6666666666666666
+        },
+        "details": {
+          "expected_tools": [
+            "get_weather"
+          ],
+          "actual_tools": [
+            "get_weather",
+            "get_weather"
+          ],
+          "expected_keywords": [
+            "Tokyo",
+            "New York",
+            "temperature"
+          ],
+          "response_preview": "The current weather in Tokyo is 15°C (58°F) with patchy rain nearby, while in New York it's 7°C (44°F) and sunny. Tokyo's humidity is 85% with a wind speed of 54 km/h, feeling like 12°C (53°F). New Yo..."
+        },
+        "agent": "Advanced Agent"
+      },
+      {
+        "query_id": 8,
+        "query": "Search for recent AI breakthroughs and tell me about neural networks from Wikipedia",
+        "difficulty": "medium",
+        "category": "multi_tool",
+        "metrics": {
+          "task_success": true,
+          "tool_recall": 1.0,
+          "tool_precision": 1.0,
+          "answer_accuracy": 1.0
+        },
+        "details": {
+          "expected_tools": [
+            "tavily_search",
+            "get_wikipedia_summary"
+          ],
+          "actual_tools": [
+            "tavily_search",
+            "get_wikipedia_summary"
+          ],
+          "expected_keywords": [
+            "AI",
+            "neural network"
+          ],
+          "response_preview": "Recent AI breakthroughs include significant advancements in 2025, with AI-fueled scientific innovation accelerating in fields like robotics and healthcare. Google made notable research breakthroughs w..."
+        },
+        "agent": "Advanced Agent"
+      },
+      {
+        "query_id": 9,
+        "query": "What's the weather in Paris, convert 50 EUR to USD, and what time is it in Paris?",
+        "difficulty": "hard",
+        "category": "complex_multi_tool",
+        "metrics": {
+          "task_success": true,
+          "tool_recall": 1.0,
+          "tool_precision": 1.0,
+          "answer_accuracy": 1.0
+        },
+        "details": {
+          "expected_tools": [
+            "get_weather",
+            "convert_currency",
+            "get_world_time"
+          ],
+          "actual_tools": [
+            "get_weather",
+            "convert_currency",
+            "get_world_time"
+          ],
+          "expected_keywords": [
+            "Paris",
+            "EUR",
+            "USD",
+            "temperature",
+            "time"
+          ],
+          "response_preview": "The current weather in Paris is overcast with a temperature of 4°C. \n50 EUR is equivalent to 58 USD. \nThe current time in Paris is 18:55:36...."
+        },
+        "agent": "Advanced Agent"
+      },
+      {
+        "query_id": 10,
+        "query": "Search for information about climate change, get the weather in Sydney, and tell me about the Great Barrier Reef",
+        "difficulty": "hard",
+        "category": "complex_multi_tool",
+        "metrics": {
+          "task_success": true,
+          "tool_recall": 1.0,
+          "tool_precision": 1.0,
+          "answer_accuracy": 1.0
+        },
+        "details": {
+          "expected_tools": [
+            "tavily_search",
+            "get_weather",
+            "get_wikipedia_summary"
+          ],
+          "actual_tools": [
+            "tavily_search",
+            "get_weather",
+            "get_wikipedia_summary"
+          ],
+          "expected_keywords": [
+            "climate",
+            "Sydney",
+            "weather",
+            "Great Barrier Reef"
+          ],
+          "response_preview": "Climate change refers to the long-term warming of the planet due to an increase in average global temperatures. The main driver of climate change is human activities, primarily the burning of fossil f..."
+        },
+        "agent": "Advanced Agent"
+      }
+    ],
+    "aggregate_metrics": {
+      "overall": {
+        "task_success_rate": 0.9,
+        "avg_tool_recall": 1.0,
+        "avg_tool_precision": 1.0,
+        "avg_answer_accuracy": 0.9166666666666666
+      },
+      "by_difficulty": {
+        "easy": {
+          "task_success_rate": 0.8,
+          "avg_tool_recall": 1.0,
+          "count": 5
+        },
+        "medium": {
+          "task_success_rate": 1.0,
+          "avg_tool_recall": 1.0,
+          "count": 3
+        },
+        "hard": {
+          "task_success_rate": 1.0,
+          "avg_tool_recall": 1.0,
+          "count": 2
+        }
+      },
+      "by_category": {
+        "single_tool": {
+          "task_success_rate": 0.8,
+          "avg_tool_recall": 1.0,
+          "count": 5
+        },
+        "multi_tool": {
+          "task_success_rate": 1.0,
+          "avg_tool_recall": 1.0,
+          "count": 3
+        },
+        "complex_multi_tool": {
+          "task_success_rate": 1.0,
+          "avg_tool_recall": 1.0,
+          "count": 2
+        }
+      },
+      "total_execution_time": 256.2177975177765,
+      "avg_time_per_query": 25.621779751777648
+    },
+    "evaluated_at": "2026-01-10T22:56:25.463990"
+  },
+  "comparison_date": "2026-01-10T22:56:25.487736"
+}

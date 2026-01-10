@@ -1,0 +1,12 @@
+langgraph==0.2.55
+langchain-core==0.3.28
+langchain-groq==0.2.1
+
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+pydantic==2.10.5
+
+requests==2.32.3
+pytz==2024.2
+
+python-dotenv==1.0.1
